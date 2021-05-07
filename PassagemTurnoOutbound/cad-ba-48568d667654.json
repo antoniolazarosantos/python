@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "cad-ba",
+  "private_key_id": "48568d6676549fd0e5b7de0c72589ff232f4371d",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCuaWUrPK+71v0e\nm1xBURkc09m4UvKlDax1RvI/UPw+vHFLS+H1B+9wkhQ2ABKZQ4M0sJF9JBqIdg40\nhv5A47wFYWRetom9vqxBFm2CNP2UeepKYNV1vecSZW154SlYckH9xl9f6+ZT3LUa\nImSpw9QQlF6Orkv25Ajd+KjS/abwJyr0qk9b48e8FEMphH4BtsO4tO4wo4jYEsR4\nzRZd3zc4Jv7ACdleNYbGLJcneoCLPW9eEXIMTD5e5KlyWjfC5Qzegxngr0n9+n+q\n9DmuuYpqtQAmKzZpZ+1UfzZkb1mGWGKNmXwGSZIKS1s+yS3IOeZHz9sCxuyZPGNd\nG+9WI1rpAgMBAAECggEAEDo46iEROjVGc32xw5eBskWRQyW/kwUOy9IcKbE1qPok\nQeTXaxKQD/2dcQlIcbde+qznenjcmZ//UhqRxzSRKsB9I9VQw0VddkhZi8T1p4YA\n2yb/kV8IA/WJLi75h3PJCU021EBI+7pEJOB4lHWGknzVf+m+YmQk4Y84WPo1+S/J\n+9RfDOaVo+OVe7SbfINidW3mhcviLFO5BFtVwg3U/zibOtHl2fwITedOG/jOCYHe\nXWvGblZ5btg+Y4SuBlC74vnRSrPBQOpGQY/YzVCpllOZOp2u0YA7qk+XgWf3jwNF\nZ+2DRmoVKJn2XHNlJ2zDXft3WgL2ul7KMW45bMS34QKBgQD1Z/lI2IrrC4VI5RLu\n0wuR/2oA8DdKC9k+gbIUtHB9RLwHDUWHmt0YDXmqiB9vi0tlDfLJTrsED054Glz+\nZJGhSSoOecby77F/NGZU/hJ/kwI1+fTdHijtPzIvMMFx3rNP6cCbGUtY1pIWHwOW\nWtlK9Q7jT989QqQESCZ90WWRYQKBgQC18NlwjVgSupf6Wtvn9kOUehj77Vi4DvTp\nuFimNz/MDyzVfsvehexRZg4QmJQ4rUinCTLKjbMTfoL7EE9SNmIl4xpyQXDHKm8Y\nPj//oE6AzRRJ+jatS5nNxPGt+01Cnkt9EgwEPgL1kxWT44/ZIOsVHiUW74ATPr9v\nOHWWrJ1OiQKBgQDUQms2m72EUYGmLCS1FyvByuZ4C033KMptqyZJjExjvUjY3JzQ\nDp2/SSB75KM0CopazLa7cfKGL2sSrNLUYk4n762FucTfqXyf5sXAK8X6PEBESX+G\npaiGlAunD4eyIwp7S1aBkF5AZ88RfR/QM6IQmGeZKyOOzA4refB5EN3F4QKBgAQp\nVR/g68HJ6M3+JAeDN3p+7HFetWfIV8u8vrJWkyv8sN7VPp6BW61k8y9n/gPp2r6P\nVE0TvqPUgfRyJA5SVh5dum4glw7HJrFcQyR6qzEA/9TNV1DRaNwvBAQhuluquTlM\nH2A9dt3dFmJCkzi5KwdZoCmNItXN2p0VooLmwdZZAoGAJfge93QDCdZUdQAXYZIY\nCAzZ4TlMbxuztXMGdJbvnuuS/hSaM52hu/ofk9Xvkj1eFvvU7gNrwwVY4oUJ7Gre\n0UVjVfZz+Pwh6kl+L8IQYlKcLNfAxSlIPqmgwj+JTSNFNqTziTH8IAlwWLMVmLsT\nAcdiTtrvAYqkF43H8dyq0v4=\n-----END PRIVATE KEY-----\n",
+  "client_email": "cad-ba-servico@cad-ba.iam.gserviceaccount.com",
+  "client_id": "100813128032177675505",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/cad-ba-servico%40cad-ba.iam.gserviceaccount.com"
+}
