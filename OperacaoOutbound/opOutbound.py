@@ -22,6 +22,9 @@ class App(QMainWindow):
             listaProcesso.append("Packing")
             listaProcesso.append("Put to wall")
             listaProcesso.append("Withdrawal")
+            listaProcesso.append("Inbound")
+            listaProcesso.append("Inbound audit")
+            listaProcesso.append("Put away")
 
         dataInicial = df["Fecha"].min(axis=0)
         dataFinal = df["Fecha"].max(axis=0)
@@ -45,19 +48,19 @@ class App(QMainWindow):
         lista_hora = []
         lista_processo = []
         lista_realizado = []
-        lista_total_dia = []
+        #lista_total_dia = []
         lista_realizado_total_processo = []
         lista_unidade_hora = []
         lista_hc = []
         lista_produtividade = []
         lista_total_processo = []
         for data in lista_data_mov:
-            str_query_total_dia = "((Fecha >= '{0} {1}') & " \
-                                  "(Fecha <= '{0} {2}'))".format(data,
-                                                                 '00:00:00',
-                                                                 '23:59:59')
-            dfTotalDia = df.query(str_query_total_dia).copy()
-            qtdTotalDia = dfTotalDia["Cantidad"].sum(axis=0)
+            #str_query_total_dia = "((Fecha >= '{0} {1}') & " \
+            #                      "(Fecha <= '{0} {2}'))".format(data,
+            #                                                     '00:00:00',
+            #                                                     '23:59:59')
+            #dfTotalDia = df.query(str_query_total_dia).copy()
+            #qtdTotalDia = dfTotalDia["Cantidad"].sum(axis=0)
 
             for nomeProcesso in listaProcesso:
                 str_query_total_processo = "((Proceso == '{0}') & (Fecha >= '{1} {2}') & " \
@@ -82,7 +85,7 @@ class App(QMainWindow):
                     lista_processo.append(nomeProcesso)
                     lista_realizado.append(qtdTotalRealizado)
                     lista_total_processo.append(qtdTotalProcesso)
-                    lista_total_dia.append(qtdTotalDia)
+                    #lista_total_dia.append(qtdTotalDia)
                     percentual = 0
                     if qtdTotalProcesso > 0:
                         percentual = round((qtdTotalRealizado / qtdTotalProcesso) * 100, 2)
@@ -99,11 +102,11 @@ class App(QMainWindow):
                  'Hora': lista_hora,
                  'Realizado( A )': lista_realizado,
                  'Total do Processo ( B )': lista_total_processo,
-                 'Total do Dia( C )': lista_total_dia,
+                # 'Total do Dia( C )': lista_total_dia,
                  '( A x B )%': lista_realizado_total_processo,
                  'Média Und./Hora ( B / 24h )': lista_unidade_hora,
-                 'HC Utilizado ( D )': lista_hc,
-                 'HC Prod./Hora ( A / D )': lista_produtividade}
+                 'HC Utilizado ( C )': lista_hc,
+                 'HC Prod./Hora ( A / C )': lista_produtividade}
 
         return pd.DataFrame(dados)
 
@@ -169,7 +172,7 @@ class App(QMainWindow):
 
     def __init__(self):
         super().__init__()
-        self.title = 'Operação Outbound - 1.0'
+        self.title = 'Movimentação Realizada - 1.0'
         self.left = 10
         self.top = 10
         self.width = 1550
@@ -229,7 +232,9 @@ class App(QMainWindow):
 
         self.cboProcesso = QComboBox(self)
         self.cboProcesso.setGeometry(10, 65, 120, 30)
-        lista_opcoes = ["Todos", "Picking", "Packing", "Put to wall", "Withdrawal"]
+        lista_opcoes = ["Todos", "Picking", "Packing",
+                        "Put to wall", "Withdrawal",
+                        "Inbound","Inbound audit", "Put away"]
 
         self.cboProcesso.addItems(lista_opcoes)
 
@@ -238,6 +243,9 @@ class App(QMainWindow):
         self.cboProcesso.setItemData(2, "Packing")
         self.cboProcesso.setItemData(3, "Put to wall")
         self.cboProcesso.setItemData(4, "Withdrawal")
+        self.cboProcesso.setItemData(5, "Inbound")
+        self.cboProcesso.setItemData(6, "Inbound audit")
+        self.cboProcesso.setItemData(7, "Put away")
 
         self.cboProcesso.activated.connect(self.selecionarProcesso)
 
