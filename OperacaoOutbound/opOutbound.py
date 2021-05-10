@@ -9,7 +9,6 @@ import pandas as pd
 from datetime import timedelta
 from dateutil.parser import parse
 
-
 class App(QMainWindow):
 
     def ProcessarDados(self, pArquivo, pProcesso):
