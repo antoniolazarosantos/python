@@ -16,6 +16,7 @@ class ConectarDB:
     def consultar_registros(self):
         return self.cur.execute('SELECT * FROM Calendario order by 1').fetchall()
 
+
     def inserir_script_diario(self, pData):
         # Calendário
         # self.cur.execute("select max(código) from calendario")
