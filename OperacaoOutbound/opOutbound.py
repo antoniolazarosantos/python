@@ -2,16 +2,21 @@ import os
 import sys
 
 from PyQt5.QtWidgets import QMainWindow, QApplication, QAction, QDesktopWidget, QFileDialog, \
-    QTableView, QMessageBox, qApp, QComboBox, QLabel
+    QTableView, QMessageBox, qApp, QComboBox, QLabel, QDialog
 from PyQt5.QtGui import QIcon
 import PandasModelo as pdm
 import pandas as pd
 from datetime import timedelta
 from dateutil.parser import parse
+import matplotlib.pyplot as plt
+
+class AppGrafico(QDialog):
+    def __init__(self, parent=None):
+        super(AppGrafico, self).__init__(parent)
 
 class App(QMainWindow):
 
-    def ProcessarDados(self, pArquivo, pProcesso):
+    def processarDados(self, pArquivo, pProcesso):
         df = pd.read_csv(pArquivo, delimiter=",")
         listaProcesso = []
         if pProcesso != "Todos":
@@ -101,7 +106,6 @@ class App(QMainWindow):
                  'Hora': lista_hora,
                  'Realizado( A )': lista_realizado,
                  'Total do Processo ( B )': lista_total_processo,
-                # 'Total do Dia( C )': lista_total_dia,
                  '( A x B )%': lista_realizado_total_processo,
                  'Média Und./Hora ( B / 24h )': lista_unidade_hora,
                  'HC Utilizado ( C )': lista_hc,
@@ -111,7 +115,7 @@ class App(QMainWindow):
 
     def criarTabela(self, pArquivo, pProcesso):
         tv = QTableView(self)
-        self.df = self.ProcessarDados(pArquivo, pProcesso)
+        self.df = self.processarDados(pArquivo, pProcesso)
         modelo = pdm.pandasModel(self.df)
         tv.setModel(modelo)
         tv.left = 5
@@ -167,7 +171,10 @@ class App(QMainWindow):
             self.close()
 
     def verGrafico(self):
-        pass
+        t = AppGrafico(self)
+        t.show()
+        t.exec_()
+
 
     def __init__(self):
         super().__init__()
