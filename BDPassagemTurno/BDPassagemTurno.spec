@@ -3,7 +3,7 @@
 block_cipher = None
 
 
-a = Analysis(['BDPassagemTurno.py'],
+a = Analysis(['BDPassagemturno.py'],
              pathex=['C:\\Mercado Livre\\Áreas\\Waves\\Python\\BDPassagemTurno'],
              binaries=[],
              datas=[],
@@ -23,7 +23,7 @@ exe = EXE(pyz,
           a.zipfiles,
           a.datas,
           [],
-          name='BDPassagemTurno',
+          name='BDPassagemturno',
           debug=False,
           bootloader_ignore_signals=False,
           strip=False,
