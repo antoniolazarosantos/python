@@ -13,7 +13,7 @@ class App(QMainWindow):
         self.title = 'Script Inicial - 1.0'
         self.left = 10
         self.top = 10
-        self.width = 450
+        self.width = 480
         self.height = 450
         self.setMaximumHeight(self.height)
         self.setMinimumHeight(self.height)
@@ -65,7 +65,7 @@ class App(QMainWindow):
         self.lblCalendario.setText("Selecione a data de processamento:")
         self.lblCalendario.setGeometry(5, 10, 350, 30)
         self.calendario = QCalendarWidget(self)
-        self.calendario.setGeometry(5, 40, 400, 250)
+        self.calendario.setGeometry(5, 40, 450, 250)
 
     def criarInputTarget(self):
         self.lblTarget = QLabel(self)
@@ -86,7 +86,7 @@ class App(QMainWindow):
     def criarBtnProcessar(self):
         self.btnProcessar = QPushButton('Processar', self)
         self.btnProcessar.setToolTip('Processar script de inicialização')
-        self.btnProcessar.move(310, 310)
+        self.btnProcessar.move(350, 310)
         self.btnProcessar.clicked.connect(self.on_click_processar)
 
     def initUI(self):
