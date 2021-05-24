@@ -8,7 +8,6 @@ import PandasModelo as pdm
 import pandas as pd
 from datetime import timedelta
 from dateutil.parser import parse
-import matplotlib.pyplot as plt
 
 class AppGrafico(QDialog):
     def __init__(self, parent=None):
