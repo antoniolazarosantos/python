@@ -75,6 +75,8 @@ def processarMovimento(listaArquivo):
          "campo_quantidade": "Cantidad"},
         {"nome": "Put to wall", "arquivo": listaArquivo[0], "delimitador": ",", "campo_data": "Fecha",
          "campo_quantidade": "Cantidad"},
+        {"nome": "Inbound", "arquivo": listaArquivo[0], "delimitador": ",", "campo_data": "Fecha",
+         "campo_quantidade": "Cantidad"},
         {"nome": "Withdrawal", "arquivo": listaArquivo[0], "delimitador": ",", "campo_data": "Fecha",
          "campo_quantidade": "Cantidad"}]
     listaResultado = []
